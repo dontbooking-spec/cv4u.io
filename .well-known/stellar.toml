@@ -1,6 +1,5 @@
-# Write your TOML from the canvas into the right path
 @'
-# SEP-1: Stellar TOML for CV4U (MAINNET)
+# cv4u.io/.well-known/stellar.toml
 VERSION = "2.5.0"
 NETWORK_PASSPHRASE = "Public Global Stellar Network ; September 2015"
 HORIZON_URL = "https://horizon.stellar.org"
