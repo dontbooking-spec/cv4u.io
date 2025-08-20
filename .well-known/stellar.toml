@@ -1,3 +1,4 @@
+# SEP-1: Stellar TOML for CV4U (MAINNET)
 @'
 # cv4u.io/.well-known/stellar.toml
 VERSION = "2.5.0"
