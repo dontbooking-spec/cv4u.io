@@ -1,0 +1,31 @@
+# SEP-1: Stellar TOML for CV4U (MAINNET)
+VERSION = "2.5.0"
+NETWORK_PASSPHRASE = "Public Global Stellar Network ; September 2015"
+HORIZON_URL = "https://horizon.stellar.org"
+
+[DOCUMENTATION]
+org_name = "Convenient 4U Inc."
+org_dba  = "CV4U"
+org_url  = "https://cv4uonline.com"
+org_description = "Reverse ATM + local marketplaces powered by Stellar."
+org_physical_address = "Alexandria, LA, USA"
+
+[[PRINCIPALS]]
+name  = "CV4U Ops"
+email = "contact@cv4uonline.com"
+
+ACCOUNTS = [
+  "GCIASLDXL4HZT7RPGYI2GSV4YCTOFGYQA6KNKCM5MX22XWYVEKVLMTJQ",  # issuer
+  "GDDOPTCTXHPHHH2TPT4H5KZUATG7U5UZ77SLBMSSN4HYNBWBSF564XO3"   # distributor
+]
+
+[[CURRENCIES]]
+code = "CV4U"
+issuer = "GCIASLDXL4HZT7RPGYI2GSV4YCTOFGYQA6KNKCM5MX22XWYVEKVLMTJQ"
+display_decimals = 7
+name = "Convenient 4U Token"
+desc  = "Utility token for the CV4U ecosystem (mainnet)."
+status = "live"
+is_unlimited = false
+anchor_asset_type = "other"
+image = "https://cv4uonline.com/assets/cv4u-logo.png"
