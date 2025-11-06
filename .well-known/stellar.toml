@@ -13,7 +13,7 @@ ORG_URL = "https://cv4uonline.com"
 ORG_LOGO = "https://cv4uonline.com/assets/cv4u_logo.png"
 ORG_DESCRIPTION = "Convenient 4U Inc. is building the CV4U token ecosystem: reverse ATMs, farmer-marketplace dApps, and precious-metal backed reserves to support food security and global commerce."
 ORG_TWITTER = "@cv4uinc"
-ORG_GITHUB = "https://github.com/cv4u"
+ORG_GITHUB = "https://cv4u.io"
 ORG_OFFICIAL_EMAIL = "admin@cv4uonline.com"
 
 # -------------------------------------------------------------------
