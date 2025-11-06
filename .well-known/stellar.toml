@@ -74,6 +74,31 @@ desc = "1 ARG = 1 gram of physical silver held in CV4U Treasury. Non-redeemable,
 conditions = "Token supply matches grams of silver bullion documented internally."
 status = "live"
 image = "https://cv4uonline.com/assets/arg_token.png"
+# -----------------------------------------------
+# Additional Asset Metadata
+# -----------------------------------------------
+
+[CURRENCIES]
+code = "CV4U"
+issuer = "GDDOPTCTXHPHHH2TPT4HSKZUATG7U5UZ77SLBMSSN4HYNWBBSF564XO3"
+name = "CV4U Utility Token"
+desc = "The CV4U token powers CV4U apps, reverse ATMs, and local-market dApps."
+conditions = "Backed by CV4U Inc. reserves and ecosystem transactions."
+image = "https://cv4uonline.com/assets/cv4u_token.png"
+anchor_asset_type = "utility"
+display_decimals = 7
+status = "live"
+
+# -----------------------------------------------
+# Validator Info
+# -----------------------------------------------
+
+[[VALIDATORS]]
+ALIAS = "CV4U_MAINNET"
+DISPLAY_NAME = "Convenient 4U Validator"
+PUBLIC_KEY = "GDDOPTCTXHPHHH2TPT4HSKZUATG7U5UZ77SLBMSSN4HYNWBBSF564XO3"
+HOST = "cv4u.io"
+HISTORY = "https://history.stellar.org/prd/core-live/core_live_001"
 
 # -------------------------------------------------------------------
 # END
