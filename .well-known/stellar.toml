@@ -1,34 +1,80 @@
-# SEP-1: Stellar TOML for CV4U (MAINNET)
-@'
-# cv4u.io/.well-known/stellar.toml
-VERSION = "2.5.0"
+# ===================================================================
+# CV4U INC. ECOSYSTEM PROOF
+# Unified TOML for CV4U Utility Token + Treasury-Backed Assets
+# SEP-0001 compliant
+# ===================================================================
+
 NETWORK_PASSPHRASE = "Public Global Stellar Network ; September 2015"
-HORIZON_URL = "https://horizon.stellar.org"
+VERSION = "2.1.0"
 
 [DOCUMENTATION]
-org_name = "Convenient 4U Inc."
-org_dba  = "CV4U"
-org_url  = "https://cv4uonline.com"
-org_description = "Reverse ATM + local marketplaces powered by Stellar."
-org_physical_address = "Alexandria, LA, USA"
+ORG_NAME = "Convenient 4U Inc. (CV4U)"
+ORG_URL = "https://cv4uonline.com"
+ORG_LOGO = "https://cv4uonline.com/assets/cv4u_logo.png"
+ORG_DESCRIPTION = "Convenient 4U Inc. is building the CV4U token ecosystem: reverse ATMs, farmer-marketplace dApps, and precious-metal backed reserves to support food security and global commerce."
+ORG_TWITTER = "@cv4uinc"
+ORG_GITHUB = "https://github.com/cv4u"
+ORG_OFFICIAL_EMAIL = "admin@cv4uonline.com"
 
-[[PRINCIPALS]]
-name  = "CV4U Ops"
-email = "admin@cv4uonline.com"
-
+# -------------------------------------------------------------------
+# Public accounts associated with this domain
+# -------------------------------------------------------------------
 ACCOUNTS = [
-  "GCIASLDXL4HZT7RPGYI2GSV4YCTOFGYQA6KNKCM5MX22XWYVEKVLMTJQ",  # issuer
-  "GDDOPTCTXHPHHH2TPT4H5KZUATG7U5UZ77SLBMSSN4HYNBWBSF564XO3"   # distributor
+  "GDDOPTCTXHPHHH2TPT4H5KZUATG7U5UZ77SLBMSSN4HYNBWBSF564XO3", # CV4U issuer (MAINNET, ACTIVE)
+  "GCWTVTV22S5HNAIZPAWBMB2LFEQAOUB2JX2Z32BK5VAPSSQI77KOPME7", # CV4U distributor
+  "GDYQHAWL4MVLY67V5ZDKFYOHRCIWXNZ7JMCQZ5SWWVBSUPYA5AR6MG7K", # Treasury wallet
+  "GDYRTGVYB3OQE36RSRDD7KQNEH5VTUT3ZCSFIDVOEZIOAMYLHWE4GU5K"  # CV4U_PoP wallet
 ]
 
+# -------------------------------------------------------------------
+# CV4U — Utility Token (ACTIVE mainnet asset)
+# -------------------------------------------------------------------
 [[CURRENCIES]]
 code = "CV4U"
-issuer = "GCIASLDXL4HZT7RPGYI2GSV4YCTOFGYQA6KNKCM5MX22XWYVEKVLMTJQ"
+issuer = "GDDOPTCTXHPHHH2TPT4H5KZUATG7U5UZ77SLBMSSN4HYNBWBSF564XO3"
+name = "CV4U Utility Token"
+desc = "Utility token powering CV4U apps, reverse ATMs, and local-market dApps."
+image = "https://cv4uonline.com/assets/cv4u_token.png"
 display_decimals = 7
-name = "Convenient 4U Token"
-desc  = "Utility token for the CV4U ecosystem (mainnet)."
 status = "live"
-is_unlimited = false
-anchor_asset_type = "other"
-image = "https://cv4uonline.com/assets/cv4u-logo.png"
-'@ | Set-Content .well-known\stellar.toml -Encoding UTF8
+is_asset_anchored = false
+conditions = "Issuer-controlled supply for ecosystem utility; no promise of profit."
+
+# -------------------------------------------------------------------
+# Legacy CV4U issuer (kept for transparency; NOT the active asset)
+# -------------------------------------------------------------------
+[[CURRENCIES]]
+code = "CV4U"
+issuer = "GAWQOP2ZG6NTWEVRZ4CXQ5AN2CCS2ESGYSEH73NBKCR33KHWRBWZYOFA"
+# contract = "CAFAKTZUXEELAT6K6Z7NMR4NNZTE4WZ25E3R6D26IOXMTLY4GPBR4IYX" # (if historically used; otherwise leave commented)
+name = "Convenient 4U Legacy Token"
+desc = "Historic CV4U issuer reference (pre-current setup). Provided for transparency."
+status = "deprecated"
+image = "https://cv4uonline.com/assets/cv4u_token.png"
+
+# -------------------------------------------------------------------
+# Treasury Reserve Tokens (Classic issuance; proof-of-backing)
+# -------------------------------------------------------------------
+[[CURRENCIES]]
+code = "AUG"
+issuer = "GDYQHAWL4MVLY67V5ZDKFYOHRCIWXNZ7JMCQZ5SWWVBSUPYA5AR6MG7K"
+display_decimals = 3
+name = "CV4U Gold Treasury Token"
+desc = "1 AUG = 1 gram of physical gold held in CV4U Treasury. Non-redeemable, treasury proof only."
+conditions = "Token supply matches grams of gold bullion documented internally."
+status = "live"
+image = "https://cv4uonline.com/assets/aug_token.png"
+
+[[CURRENCIES]]
+code = "ARG"
+issuer = "GDYQHAWL4MVLY67V5ZDKFYOHRCIWXNZ7JMCQZ5SWWVBSUPYA5AR6MG7K"
+display_decimals = 3
+name = "CV4U Silver Treasury Token"
+desc = "1 ARG = 1 gram of physical silver held in CV4U Treasury. Non-redeemable, treasury proof only."
+conditions = "Token supply matches grams of silver bullion documented internally."
+status = "live"
+image = "https://cv4uonline.com/assets/arg_token.png"
+
+# -------------------------------------------------------------------
+# END
+# -------------------------------------------------------------------
